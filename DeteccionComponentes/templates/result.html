@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado de Detección</title>
+</head>
+<body>
+    <h1>Resultado de la Detección</h1>
+    <h3>{{ mensaje }}</h3>
+    <img src="{{ url_for('static', filename=resultado) }}" alt="Resultado" style="max-width: 500px;">
+    <br><a href="/">Volver a subir imágenes</a>
+</body>
+</html>
