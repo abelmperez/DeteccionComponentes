@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Demo Detección Componentes Faltantes</title>
+    <title>Configuración de Detección de Componentes</title>
 </head>
 <body>
-    <h1>Subir imágenes para detectar componentes faltantes</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <label>Imagen de referencia:</label><input type="file" name="referencia"><br><br>
-        <label>Imagen de prueba:</label><input type="file" name="prueba"><br><br>
-        <input type="submit" value="Analizar">
+    <h1>Configurar Imagen de Referencia</h1>
+    <form action="/upload_reference" method="post" enctype="multipart/form-data">
+        <label>Imagen de referencia:</label><input type="file" name="referencia" accept="image/jpeg,image/png"><br><br>
+        <input type="submit" value="Subir Referencia">
     </form>
+    <br><a href="/results">Ver Resultados en Tiempo Real</a>
 </body>
 </html>

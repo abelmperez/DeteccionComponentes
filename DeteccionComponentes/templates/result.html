@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resultado de Detección</title>
+    <title>Resultados de la Línea de Producción</title>
+    <meta http-equiv="refresh" content="5"> <!-- Refrescar cada 5 segundos -->
 </head>
 <body>
-    <h1>Resultado de la Detección</h1>
-    <h3>{{ mensaje }}</h3>
-    <img src="{{ url_for('static', filename=resultado) }}" alt="Resultado" style="max-width: 500px;">
-    <br><a href="/">Volver a subir imágenes</a>
+    <h1>Resultados de Detección de Fallos</h1>
+    {% for img, mensaje in results %}
+        <h3>{{ mensaje }}</h3>
+        <img src="{{ url_for('static', filename=img) }}" alt="Resultado" style="max-width: 500px;">
+        <br>
+    {% endfor %}
+    <br><a href="/">Volver a Configuración</a>
 </body>
 </html>
